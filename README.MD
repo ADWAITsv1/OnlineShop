@@ -1,28 +1,34 @@
 # 🛍️ OnlineShop  
 **A Minimal Flask E-Commerce Web App**
 
-OnlineShop is a simple full-stack prototype built using **Flask**, featuring a responsive dark-theme UI, local image assets, and a dynamic shopping cart system.  
-It demonstrates core web-app architecture — templates, routing, session storage, and JSON-based product management.
+OnlineShop is a full-stack mini e-commerce prototype built using **Flask**, featuring a clean dark UI, dynamic cart system, and JSON-based product catalog.  
+It demonstrates essential web architecture: templating, session handling, and static asset management — perfect for learning or portfolio showcase.
 
 ---
 
-## 🧠 Features
+## ✨ Features
 
-- 🗂️ Product catalog loaded from local JSON  
-- 🖼️ Local product images served via `/static/images`  
-- 🛒 Add-to-cart functionality using Flask sessions  
-- 🔐 Simple login form (demo only — no database yet)  
-- ⚡ Responsive dark-theme UI  
+- 🗂️ Dynamic product catalog loaded from `products.json`  
+- 🖼️ Local image assets under `/static/images/`  
+- 🛒 Add-to-cart and session-based storage  
+- 🔐 Simple login demo (no DB yet — for UX demonstration)  
+- ⚡ Responsive dark-theme design built with pure CSS  
 
 ---
 
-## 📸 Preview
-
-### 🏠 Product Catalog
-![OnlineShop Catalog](static/Screenshot%202025-11-03%20at%2016.31.33.png)
+## 📸 App Preview
 
 ### 🔐 Login Page
-![OnlineShop Login](static/Screenshot%202025-11-03%20at%2016.36.55.png)
+![Login Page](static/Screenshot%202025-11-03%20at%2017.14.06.png)
+
+### 🏠 Product Catalog
+![Product Catalog](static/Screenshot%202025-11-03%20at%2017.14.33.png)
+
+### ➕ Add to Cart
+![Add to Cart](static/Screenshot%202025-11-03%20at%2017.14.47.png)
+
+### 🛒 Cart Page
+![Cart Page](static/Screenshot%202025-11-03%20at%2017.15.02.png)
 
 ---
 
@@ -32,7 +38,7 @@ It demonstrates core web-app architecture — templates, routing, session storag
 |:------|:------------|
 | **Backend** | Flask (Python) |
 | **Frontend** | HTML, CSS, Jinja2 Templates |
-| **Data** | JSON file (`data/products.json`) |
+| **Data Source** | JSON (`data/products.json`) |
 | **Session Handling** | Flask `session` |
 | **Styling** | Custom dark-theme CSS |
 
@@ -45,7 +51,7 @@ It demonstrates core web-app architecture — templates, routing, session storag
 git clone https://github.com/ADWAITsv1/OnlineShop.git
 cd OnlineShop
 
-# 2️⃣ Create a virtual environment
+# 2️⃣ Create virtual environment
 python3 -m venv .venv
 source .venv/bin/activate   # macOS/Linux
 
@@ -54,6 +60,7 @@ pip install -r requirements.txt
 
 # 4️⃣ Run Flask app
 python app.py
+
 
 
 Then open your browser → http://127.0.0.1:8502
