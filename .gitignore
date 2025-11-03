@@ -48,3 +48,18 @@ yarn-error.log*
 uploads/
 media/
 staticfiles/
+
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# venvs
+.venv/
+venv/
+
+# env
+.env

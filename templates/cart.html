@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your Cart</h1>
+{% if not cart %}
+  <p>Cart is empty.</p>
+{% else %}
+  <table class="table">
+    <thead>
+      <tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr>
+    </thead>
+    <tbody>
+      {% for it in cart %}
+      <tr>
+        <td class="row-item">
+          {% if it.image %}<img src="{{ it.image }}" alt="" class="thumb">{% endif %}
+          {{ it.name }}
+        </td>
+        <td>{{ it.qty }}</td>
+        <td>¥{{ '%.2f'|format(it.price) }}</td>
+        <td>¥{{ '%.2f'|format(it.subtotal) }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <h3>Total: ¥{{ '%.2f'|format(total) }}</h3>
+  <form method="post" action="{{ url_for('clear_cart') }}">
+    <button type="submit" class="danger">Clear cart</button>
+  </form>
+{% endif %}
+{% endblock %}
